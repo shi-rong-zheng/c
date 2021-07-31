@@ -112,3 +112,143 @@
 //	                    
 //}          
 
+//#include<stdio.h>
+//创建一个结构体类型-struct Stu
+//struct Stu
+//{
+//	char name[20];
+//	int age;
+//	char id[20];
+//};
+//int main()
+//{
+	//使用struct Stu 这个类型创建了一个学生对象s1，并初始化
+	//struct Stu s1 = {"史荣政",21,"20200129032"};
+	//printf("%s\n", s1.name);
+	//printf("%d\n", s1.age);
+	//printf("%s\n", s1.id);
+
+	//struct Stu* ps = &s1;
+	//printf("%s\n", ps->name);
+	//printf("%d\n", ps->age);
+	//printf("%s\n", ps->id);
+	//结构体指针->成员名
+
+	////两种方法都是一样的
+	//printf("%s\n", (*ps).name);
+	//printf("%d\n", (*ps).age);
+	//printf("%s\n", (*ps).id);
+//	return 0;
+//}
+//原码->补码：原码取反加1得到反码
+//补码->原码：补码减1取反得到原码
+
+
+//指针
+//指针类型决定了指针进行解引用操作的时候，能够访问空间的大小
+//int* p; *p能够访问4个字节
+//char* p; *p能够访问1个字节
+//double* p; *p能够访问8个字节
+//指针类型决定了：指针走一步走多远（指针的步长)
+//int* p;p+1-->4
+//char* p;p+1-->1
+//double* p;p+1-->8
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 0x11223344;
+//	float* p = &a;
+// 	printf("%f ", *p);
+//	return 0;
+//}
+
+
+// 野指针
+//#include<stdio.h>
+//int main()
+//{
+//	int* p;//未初始化的指针变量
+//	*p = 20;
+//
+//	return 0;
+//}
+
+//数组越界访问了，野指针
+//#include<stdio.h>
+//int main()
+//{
+//	int a[10] = { 0 };
+//	int i = 0;
+//	int* p = a;
+//	for (i = 0; i < 12; i++)
+//	{
+//		*p = i;
+//		p++;//可以写成    *p++=i;
+//	}
+//	return 0;
+//}
+
+
+//这是一个隐藏错误的代码，编译器发现不出来
+//#include<stdio.h>
+//int* test()
+//{
+//	int a = 10;//里面的a的地址是临时的，出去就销毁了，这里的a是局部变量
+//	return &a;
+//}
+//int main()
+//{
+//	int* p = test();
+//	printf("%d\n", *p);
+//	return 0;
+//}
+
+//如何避免野指针？
+//1.指针初始化 int* p=NULL; //NULL - 用来初始化指针的，给指针赋值 //当指针为NULl（空）时，不能被访问
+//2.小心指针越界
+//3.指针只想空间释放即使置NULl
+//4.指针使用之前检查有效性
+
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[10] = {0};
+//	int i = 0;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int* p = &arr;
+//	for (i = 0; i < sz; i++)
+//	{
+//		
+//		printf("%d ", *p);
+//		p++;
+//	}
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//#define N_VALUES 5
+//int main()
+//{
+//	float values[N_VALUES];
+//	float* vp;
+//	for (vp = &values[0]; vp < &values[N_VALUES];)
+//	{
+//		*vp++ = 0;
+//	}
+//	printf("%f ", *vp);
+//	return 0;
+//}
+
+#include<stdio.h>
+int main()
+{
+	int arr[] = { 1,2,3,4,5,6,7,11,23 };
+	printf("%d\n", &arr[8] - &arr[0]);
+	return 0;
+}
+ 
+//int arr[10]={1,2,3,4,5,6,7,8,9,10};
+// &arr[9]-&arr[0]
+//指针-指针：得到中间的元素个数
