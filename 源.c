@@ -1,155 +1,35 @@
-#define _CRT_SECURE_NO_WARNINGS 1
-#include<stdio.h>
-#define Max(X,Y)(X>Y?X:Y)
-#include<math.h>
+/*#include<stdio.h>
 int main()
 {
-	//int a, b, c;
-	//printf("请输入三个数:");
-	//scanf("%d%d%d", &a, &b, &c);
-	//int max1 = 0, max2 = 0, max3 = 0;
-	//if (a > b && a > c & b > c)
-	//{
-	//	printf("%d>%d>%d", a, b, c);
-	//}
-	//else if (a > b && a > c && c > b)
-	//{
-	//	printf("%d>%d>%d", a, c, b);
-	//}
-	//else if (b>a&&b>c&&a>c)
-	//{
-	//	printf("%d>%d>%d", b,a,c);
-	//}
-	//else if (b > a && b > c && c>a)
-	//{
-	//	printf("%d>%d>%d", b,c,a);
-	//}
-	//else if (c>a&&c>b&&a>b)
-	//{
-	//	printf("%d>%d>%d",c,a,b);
-	//}
-	//else if (c > a && c > b && b>a)
-	//{
-	//	printf("%d>%d>%d", c,b,a);
-	//}
-
-	//int a, b, c;
-	//printf("请输入三个数:");
-	//scanf("%d%d%d", &a, &b, &c);
-	//if (a < b)
-	//{
-	//	int temp = a;
-	//	a=b;
-	//	b=temp;
-	//}
-	//else if (a < c)
-	//{
-	//	int temp = a;
-	//	a = c;
-	//	c = temp;
-	//}
-	//else if (b<c)
-	//{
-	//	int temp = b;
-	//	b = c;
-	//	c = temp;
-	//}
-	//printf("%d>%d>%d", a, b, c);
-
-	//int i = 1;
-	//for (i = 1; i <= 100; i++)
-	//{
-	//	if (0 == i % 3)
-	//	{
-	//		printf("%d\t", i);
-	//		if (0 == i % 5)
-	//		{
-	//			printf("\n");
-	//		}
-	//	}
-	//}
-
-	//求最大公约数(辗转相除法)
-	//int m ;
-	//int n ;
-	//int r = 0;
-	//printf("请输入两个数:");
-	//scanf("%d%d", &m, &n);
-	//while (r=m % n)
-	//{
-	////	r = m % n;
-	//	m = n;
-	//	n = r;
-	//}
-	//printf("最大公约数是:%d", n);
-
-
-	//判断year是否为闰年
-	//1.能被4整除并且不能被100整除是闰年
-	//2.能被400整除是闰年
-	//int year=0;
-	//int count = 0;
-	//for (year = 1000; year <= 2000; year++)
-	//{
-	//	if (0 == year % 4 && 0 != year % 100|| 0 == year % 400)
-	//	{
-	//		printf("%d\t", year);
-	//		count++;
-	//		if (0 == count % 10)
-	//		{
-	//			printf("\n");
-	//		}
-	//	}
-	//}
-	//printf("count=%d\n", count);
-
-	//int i;
-	//for (i = 100; i <= 200; i++)
-	//{
-	//	//素数判断的规则
-	//	int n = 0;
-	//	for (n = 2; n < i ; n++)
-	//	{
-	//		if (i % n == 0)
-	//		{
-	//			break;
-	//		}
-	//	}
-	//	if (n == i)
-	//	{
-	//		printf("%d\t", i);
-	//	}
-	//}
-
-
-	
-	int i=0;
-	int count = 0;
-	for (i = 100; i <= 200; i++)
-	{
-		//素数判断的规则
-		int n = 0;
-		//for (n = 2; n < sqrt(i); n++)  //for(n=2;n<(i/2);n++)一样的
-		for(n=2;n<(i/2);n++)
-		{
-			if (i % n == 0)
-			{
-				break;
-			}
-		}
-		
-		if (n>sqrt(i))
-		{
-			printf("%d\t", i);
-			count++;
-			if (count % 5 == 0) 
-			{
-				printf("\n");
-			}
-			
-		}
-	}
-
-								
+	int i,j;
+	int arr1[7] = { 1,4,8,11,9,5,6 };
+	int arr2[6] = { 3,7,11,5,9,1 };
+	printf("arr1:");
+	for (i = 0; i <= 6; i++)
+			printf("%d", arr1[6 - i]);
+	printf("\t");
+	printf("arr2:");
+	for (j = 0; j <= 5; j++)
+		printf("%d", arr2[5 - j]);
 	return 0;
+}*/
+#include<stdio.h>
+#include<stdlib.h>
+int main(void)
+{
+	int i=0;
+	int j = 6;
+	int teap=0;
+	int arr1[7] = { 1,4,8,11,9,5,6 };
+	for (; i<j; ++i, --j)
+	{
+		arr1[i] = teap;
+		arr1[i] = arr1[j];
+		arr1[j] = teap;
+	}
+	for (i = 0; i <= 6; ++i)
+		printf("%d", arr1[i]);
+	return 0;
+
+
 }
