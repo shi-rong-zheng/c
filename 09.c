@@ -241,14 +241,139 @@
 //	return 0;
 //}
 
-#include<stdio.h>
-int main()
-{
-	int arr[] = { 1,2,3,4,5,6,7,11,23 };
-	printf("%d\n", &arr[8] - &arr[0]);
-	return 0;
-}
- 
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,11,23 };
+//	printf("%d\n", &arr[8] - &arr[0]);
+//	return 0;
+//}
+// 
 //int arr[10]={1,2,3,4,5,6,7,8,9,10};
 // &arr[9]-&arr[0]
 //指针-指针：得到中间的元素个数
+
+//strlen
+//#include<stdio.h>
+//int my_strlen(char* str)
+//{
+//	char* start = str;
+//	char* end =str;
+//	while (*end != '\0')
+//	{
+//		end++;
+//	}
+//	return end - start;
+//}
+//int main()
+//{
+//	char arr[] = "bit";
+//	int len = my_strlen(arr);
+//	printf("%d ", len);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	char arr[] = {1,2,0};
+//	int len = strlen(arr);
+//	printf("%d ", len);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	printf("%p\n", arr);//地址 - 首元素的地址
+//	printf("%p\n", &arr[0]);
+//	//1.&arr-&数组名- 数组名不是首元素的地址-数组名表示整个数组-&数组名 取出的是整个数组的地址
+//	//2.sizeof(arr)-sizeof(数组名) - 数组名表示的整个数组- sizeof(数组名)计算的是整个数组的大小
+//	return 0;
+//}
+
+//二级指针变量
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 10;
+//	int * pa = &a;
+//	int* * ppa = &pa;//ppa就是二级指针
+//	int** * pppa = &ppa;//pppa就是三级指针，以此类推
+//	**ppa = 34;
+//	printf("%d\n", **ppa);
+//	printf("%d\n", a);
+//	return 0;
+//}
+
+//好孩子 - 孩子
+//指针数组 - 数组 - 存放指针的数组
+//数组指针 - 指针
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int c = 30;
+	//int* pa = &a;
+	//int* pb = &b;
+	//int* pc = &c;
+
+	//int* arr2[] = { &a,&b,&c };
+	//int i = 0;
+	//for (i = 0; i < 3; i++)
+	//{
+	//	printf("%d ", *arr2[i]);//解引用
+	//}
+
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	int c = 0;
+//	printf("请输入:>");
+//	scanf("%d%d%d", &a,&b,&c);
+//	if (a > b)
+//	{
+//		int temp = a;
+//		a = b;
+//		b = temp;
+//	}
+//	if (b > c)
+//	{
+//		int temp = b;
+//		b=c;
+//		c = temp;
+//	}
+//	if (a > c)
+//	{
+//		int temp = a;
+//		a=c;
+//		c = temp;
+//	}
+//	printf("%d<%d<%d", a, b, c);
+//	return 0;
+//}
+
+#include <stdio.h>
+main()
+{
+	int a = 5, b, c, i = 10;
+	b = a++;
+	c = ++b;
+
+	printf("a = %d, b = %d, c = %d\n", a, b, c);//6 5 6         6 6 6 
+	printf("i,i++,i++ = %d,%d,%d\n", i, i++, i++);//10 10 11    12 11 10
+	printf("%d\n", ++i);//13
+	printf("%d\n", --i);//12
+	printf("%d\n", i++);//12
+	printf("%d\n", i--);//13
+	printf("%d\n", -i++);//-12
+	printf("%d\n", -i--);//-13
+	getchar();
+}
