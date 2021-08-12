@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #define _CRT_SECURE_NO_WARNINGS 1
 
 //两分法查数
@@ -181,54 +180,71 @@
 //	return 0;
 //}
 
-=======
-#define _CRT_SECURE_NO_WARNINGS 1
-
-//两分法查数
 //#include<stdio.h>
-//int find(int arr[],int az,int k)
-//{
-//	int left = 0;
-//	int right = az - 1;
-//	while (left <= right)
-//	{
-//		int mid = (left + right) / 2;
-//		if (arr[mid] < k)
-//		{
-//			left = mid + 1;
-//		}
-//		else if(arr[mid] > k)
-//		{
-//			right = mid - 1;
-//		}
-//		else if (arr[mid] == k)
-//		{
-//			return mid;
-//		}
-//	}
-//	if (left > right)
-//	{
-//		printf("找不到！\n");
-//	}
-//}
+//#include<math.h>
 //int main()
 //{
-//	int k = 0;
-//	printf("请输入您要查找的数:>");
-//	scanf("%d", &k);
-//	int arr[] = {1,2,3,4,5,19,7,45,9};
-//	int ret = 0;
-//	int az = sizeof(arr) / sizeof(arr[0]);
-//	ret = find(arr,az,k);
-//	printf("这个数的下标是：%d\n", ret);
-//	printf("您要查找的数是：%d\n", arr[ret]);
+	//int i = 0;
+	//int j = 0;
+	//for (i = 101; i <= 200; i+=2)
+	//{
+	//	for (j = 2; j < i; j++)
+	//	{
+	//		if (i % j == 0)
+	//		{
+	//			break;
+	//		}
+	//	}
+	//	if (i == j)
+	//	{
+	//		printf("%d ", i);
+	//	}
+	//}
+
+	//代码优化
+	//int i = 0;
+	//int j = 0;
+	//for (i = 101; i <= 200; i++)
+	//{
+	//	for (j = 2; j <= sqrt(i); j++)
+	//	{
+	//		if (i % j == 0)
+	//		{
+	//			break;
+	//		}
+	//	}
+	//	if (j > sqrt(i))
+	//	{
+	//		printf("%d ", i);
+	//	}
+	//}
 //	return 0;
 //}
 
+//打印出所有的“水仙花数”，所谓“水仙花数”是指一个三位数，其各位数字立方和等于该数本身
 //#include<stdio.h>
 //int main()
 //{
+//	int a = 0;
+//	int b = 0;
+//	int c = 0;
 //
+//	for (a = 1; a < 10; a++)
+//	{
+//		for (b = 1; b < 10; b++)
+//		{
+//			int n = 0;
+//			int m = 0;
+//			for (c = 1; c < 10; c++)
+//			{
+//				n = a * a * a + b * b * b + c * c * c;
+//				m = a * 100 + b * 10 + c;
+//				if (n == m)
+//				{
+//					printf("%d ", m);
+//				}
+//			}
+//		}
+//	}
 //	return 0;
 //}
->>>>>>> 57f4aa6604ee343de8f88266e1750166661a06da
