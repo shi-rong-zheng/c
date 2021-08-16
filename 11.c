@@ -263,18 +263,165 @@
 
 
 
+//2+22+222+2222+22222...
+//#include<stdio.h>
+//#include<math.h>
+//int main()
+//{
+//	int n = 0;
+//	int m;
+//	int i = 0;
+//	int sum = 0;
+//	int count = 0;
+//	printf("请输入几个数相加,相加数为几:>\n");
+//	scanf("%d%d", &n,&m);
+//	for (i = 1; i <= n; i++)
+//	{
+//		double p=pow(m, i);
+//		sum = sum + p;
+//		count++;
+//		int k;
+//		if (count == n )
+//		{
+//			printf("%.0f", p);
+//		}
+//		else
+//		{
+//			printf("%.0f+", p);
+//		}
+//	}
+//	printf("=sum\n");
+//	printf("sum=%d\n", sum);
+//	return 0;
+//}
 
+//讲一个正整数分解质因数。例如：输入90，打印出90=2*3*3*5。
+//#include<stdio.h>
+//int main()
+//{
+//	int n = 0;
+//	int i = 0;
+//	printf("请输入整数:>");
+//	scanf("%d", &n);
+//	printf("%d=", n);
+//	for (i = 2; i <= n; i++)
+//	{
+//		while(n%i==0)
+//		{
+//			printf("%d", i);
+//			n = n / i;
+//			if (n != 1)
+//			{
+//				printf("*");
+//			}
+//		}
+//	}
+//	printf("\n");
+//	return 0;
+//}
 
+//#include<stdio.h>
+//int main()
+//{
+//	int i, n;
+//	printf("请输入整数:>");
+//	scanf("%d", &n);
+//	for (i = 2; i <= n; i++)
+//	{
+//		while(n % i == 0)
+//		{
+//			printf("%d", i);
+//			n = n / i;
+//			if (n != 1)
+//			{
+//				printf("*");
+//			}
+//		}
+//	}
+//	return 0;
+//}
 
+//#include<stdio.h>
+//int main()
+//{
+//	int i, n;
+//	printf("请输入整数:>");
+//	scanf("%d", &n);
+//	printf("%d=", n);
+//	i = 2;
+//	while (n > i)
+//	{
+//		if (n % i == 0)
+//		{
+//			printf("%d*", i);
+//			n /= i;
+//		}
+//		else
+//		{
+//			i++;
+//		}
+//	}
+//	printf("%d\n", i);
+//}
 
+//#include<stdio.h>
+//int min(int m,int n)
+//{
+//	return m * n;
+//
+//}
+//int max(int m, int n)
+//{
+//	int i = 0;
+//	while ((m % i == 0)&&(n % i == 0))
+//	{
+//		if ((m % i == 0) && (n % i == 0))
+//		{
+//			m = m % i;
+//			n = n % i;
+//		}
+//		else
+//		{
+//			i++;
+//		}
+//	}
+//	return i;
+//}
+//int main()
+//{
+//	int m, n,ret,ret1;
+//	printf("请输入两个正整数:>");
+//	scanf("%d%d", &m, &n);
+//	ret = max(m,n);
+//	printf("最大公约数:%d\n");
+//	ret1 = min(m,n);
+//	printf("最小公倍数:%d\n"); 
+//	return 0;
+//}
 
-
-
-
-
-
-
-
+#include<stdio.h>
+int main()
+{
+	int a, b, t, r, n;
+	printf("请输入两个数字:\n");
+	scanf("%d%d", &a, &b);
+	if (a < b)
+	{
+		t = b;
+		b = a;
+		a = t;
+	}
+	r = a % b;
+	n = a * b;
+	while (r != 0)
+	{
+		a = b;
+		b = r;
+		r = a % b;
+	}
+	printf("这两个数的最大公约数是%d,最小公倍数是%d\n", b, n / b);
+	return 0;
+}
 
 
 
