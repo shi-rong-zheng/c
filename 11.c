@@ -365,65 +365,60 @@
 //}
 
 //#include<stdio.h>
-//int min(int m,int n)
-//{
-//	return m * n;
-//
-//}
-//int max(int m, int n)
-//{
-//	int i = 0;
-//	while ((m % i == 0)&&(n % i == 0))
-//	{
-//		if ((m % i == 0) && (n % i == 0))
-//		{
-//			m = m % i;
-//			n = n % i;
-//		}
-//		else
-//		{
-//			i++;
-//		}
-//	}
-//	return i;
-//}
 //int main()
 //{
-//	int m, n,ret,ret1;
-//	printf("请输入两个正整数:>");
-//	scanf("%d%d", &m, &n);
-//	ret = max(m,n);
-//	printf("最大公约数:%d\n");
-//	ret1 = min(m,n);
-//	printf("最小公倍数:%d\n"); 
+//	int a, b, t, r, n;
+//	printf("请输入两个数字:\n");
+//	scanf("%d%d", &a, &b);
+//	if (a < b)
+//	{
+//		t = b;
+//		b = a;
+//		a = t;
+//	}
+//	r = a % b;
+//	n = a * b;
+//	while (r != 0)
+//	{
+//		a = b;
+//		b = r;
+//		r = a % b;
+//	}
+//	printf("这两个数的最大公约数是%d,最小公倍数是%d\n", b, n / b);
 //	return 0;
 //}
 
-#include<stdio.h>
-int main()
-{
-	int a, b, t, r, n;
-	printf("请输入两个数字:\n");
-	scanf("%d%d", &a, &b);
-	if (a < b)
-	{
-		t = b;
-		b = a;
-		a = t;
-	}
-	r = a % b;
-	n = a * b;
-	while (r != 0)
-	{
-		a = b;
-		b = r;
-		r = a % b;
-	}
-	printf("这两个数的最大公约数是%d,最小公倍数是%d\n", b, n / b);
-	return 0;
-}
+//两个自然数的最大公约数与最小公倍数的乘积等于这两个数的乘积
+//最大公约数不大于两个数中的任何一个
 
-
-
+//#include<stdio.h>
+//int main()
+//{
+//	int a, b,n,i;
+//	printf("请输入两个整数:>\n");
+//	scanf("%d%d", &a, &b);
+//	if (a < b)// 4 2
+//	{
+//		int temp = a;
+//		a = b;
+//		b = temp;
+//	}
+//	i = b;
+//	n = a * b;
+//	while (i)
+//	{
+//		if ((a % i == 0) && (b % i == 0))
+//		{
+//			printf("这两个数的最大公约数是%d\n", i);
+//			break;
+//		}
+//		else
+//		{
+//			i--;
+//		}
+//	}
+//	printf("最小公倍数是%d\n",n / i);
+//	return 0;
+//}
 
 
