@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+//#define _CRT_SECURE_NO_WARNINGS 1
 //有1,2,3,4个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？
 
 //#include<stdio.h>
@@ -421,4 +421,128 @@
 //	return 0;
 //}
 
+//逆向输入数组
+//#include<stdio.h>
+//int fun(int arr1[],int sz)
+//{
+//	int left = 0;
+//	int right = sz - 1;
+//	while (left < right)
+//	{
+//		int temp = arr1[left];
+//		arr1[left] = arr1[right];
+//		arr1[right] = temp;
+//		left++;
+//		right--;
+//	}
+//}
+////void print(int arr1[], int sz)
+////{
+////	int i = 0;
+////	for (i = 0; i < sz; i++)
+////	{
+////		printf("%d ", arr1[i]);
+////	}
+////}
+//int main()
+//{
+//	int arr1[] = { 1,2,3,4,5,6,7,8,9 };
+//	int i = 0;
+//	int ret = 0;
+//	int sz = sizeof(arr1) / sizeof(arr1[0]);
+//	fun(arr1,sz);
+//	/*print(arr1, sz);*/
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr1[i]);
+//	}
+//	return 0;
+//}
 
+//#include<stdio.h>
+//int main()
+//{
+//	int arr1[] = { 1,2,3,4,5 };
+//	int arr2[] = { 6,7,8,9,0 };
+//	int i = 0;
+//	int j = 0;
+//	int sz = sizeof(arr1) / sizeof(arr1[0]);
+//	for (i = 0; i < sz; i++)
+//	{
+//		int temp = arr2[i];
+//		arr2[i] = arr1[i];
+//		arr1[i] = temp;
+//	}
+//	printf("\n");
+//	printf("arr1:");
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr1[i]);
+//	}
+//	printf("\n");
+//	printf("arr2:");
+//	for (i = 0; i< sz; i++)
+//	{
+//		printf("%d ", arr2[i]);
+//	}
+//	return 0;
+//}
+
+ //求一个二进制中表示1的个数
+//#include<stdio.h>
+//int count_bit_one( unsigned n)
+//{
+//	int count = 0;
+//	int i = 0;
+//	for(i=0;i<32;i++)
+//	{
+//		if ((n % 2) == 1)
+//		{
+//			count++;
+//		}
+//		n = n / 2;
+//	}
+//	
+//	return count;
+//}
+//int main()
+//{
+//	int n = 0;
+//	printf("请输入一个数:>");
+//	scanf("%d", &n);
+//	int count=count_bit_one(n);
+//	printf("count=%d", count);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int count_bit_one(int n)
+//{
+//	int count = 0;
+//	int i = 0;
+//	for (i = 32; i > 0; i--)
+//	{
+//		if (((n >> i) & 1) == 1)
+//		{
+//			count++;
+//		}
+//	}
+//	return count;
+//}
+//int main()
+//{
+//	int n = 0;
+//	printf("请输入一个数:>");
+//	scanf("%d", &n);
+//	int count=count_bit_one(n);
+//	printf("count=%d", count);
+//	return 0;
+//}
+
+#include<stdio.h>
+int main()
+{
+	int n = 0;
+	scanf_s("%d", &n);
+	return 0;
+}
