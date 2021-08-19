@@ -1,4 +1,4 @@
-//#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WARNINGS 1
 //有1,2,3,4个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？
 
 //#include<stdio.h>
@@ -539,10 +539,36 @@
 //	return 0;
 //}
 
-#include<stdio.h>
-int main()
-{
-	int n = 0;
-	scanf_s("%d", &n);
-	return 0;
-}
+//n=n&(n-1)
+//n
+//13
+//1101    n
+//1100    n-1
+//1100    n 
+//1011    n-1
+//1000    n
+//0111    n-1
+//0000    n
+
+//高效代码：求一个二进制中表示1的个数
+//#include<stdio.h>
+//int count_bit_one(int n)
+//{
+//	int count = 0;
+//	int i = 0;
+//	while (n)
+//	{
+//		n = n & (n - 1);
+//		count++;
+//	}
+//	return count;
+//}
+//int main()
+//{
+//	int n = 0;
+//	printf("请输入一个数:>");
+//	scanf("%d", &n);
+//	int count=count_bit_one(n);
+//	printf("count=%d", count);
+//	return 0;
+//}
