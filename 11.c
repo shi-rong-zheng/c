@@ -572,3 +572,69 @@
 //	printf("count=%d", count);
 //	return 0;
 //}
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	int temp = 0;
+//	printf("请输入两个数:>");
+//	scanf("%d%d", &a, &b);
+//	{
+//		temp = a;
+//		a = b;
+//		b = temp;
+//	}
+//	printf("a=%d b=%d", a, b);
+//	return 0;
+//}
+//a=4 b=5  
+
+//0100   a
+//0101   b
+//0001   a=a^b   1
+//0100   b=a^b   4
+//0101   a=a^b   5
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	printf("请输入两个数:>");
+//	scanf("%d%d", &a, &b);
+//	//a = a + b;
+//	//b = a - b;//b=4
+//	//a = a - b;//a=9-4=5
+//	a = a ^ b;
+//	b = a ^ b;	
+//	a = a ^ b;
+//	printf("a=%d b=%d", a, b);
+//	return 0;
+//}
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int i, j,m, n, x;
+	for (i = 1; i < 168 / 2 + 1; i++)
+	{
+		if (168 % i == 0)
+		{
+			j = 168 / i;
+			if (i > j && (i + j) % 2 == 0 && (i - j) % 2 == 0)
+
+			{
+				m = (i + j) / 2;
+				n = (i - j) / 2;
+				x = n * n - 100;
+				printf("%d ",n);
+				printf("%d ",m);
+			}
+		}
+	}
+	return 0;
+}
