@@ -198,3 +198,40 @@
 //}
 
 //将参数字符串中的字符反向排列（不能使用c函数库中的字符串操作函数）
+
+
+//#include<stdio.h>
+//int main()
+//{
+//    char str[] = "http://c.biancheng.net";
+//    printf("%s\n", str);//通过字符串名字输出
+//    printf("%s\n", "http://c.biancheng.net");//直接输出
+//    puts(str);//通过字符串名字输出
+//    puts("http://c.biancheng.net");//直接输出
+//    return 0;
+//}
+
+//第一次输入的字符串被 gets() 全部读取，并存
+//入 str1 中。第二次输入的字符串，前半部分被
+//第一个 scanf() 读取并存入 str2 中，后半部分被第二个 scanf() 读取并存入 str3 中。
+//#include<stdio.h>
+//int main()
+//{
+//    char str1[30] = { 0 };
+//    char str2[30] = { 0 };
+//    char str3[30] = { 0 };
+//
+//    //gets()用法
+//    printf("Input a string：");
+//    gets(str1);
+//
+//    //scanf()用法
+//    printf("Input a string：");
+//    scanf("%s", str2);
+//    scanf("%s", str3);
+//
+//    printf("\nstr1:%s\n", str1);
+//    printf("str2:%s\n", str2);
+//    printf("str3:%s\n", str3);
+//    return 0;
+//}
