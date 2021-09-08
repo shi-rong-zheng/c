@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+//#define _CRT_SECURE_NO_WARNINGS 1
 
 //两分法查数
 //#include<stdio.h>
@@ -231,11 +231,19 @@
 //
 //	for (a = 1; a < 10; a++)
 //	{
+
+//		for (b = 0; b < 10; b++)
+//		{
+//			int n = 0;
+//			int m = 0;
+//			for (c = 0; c < 10; c++)
+
 //		for (b = 1; b < 10; b++)
 //		{
 //			int n = 0;
 //			int m = 0;
 //			for (c = 1; c < 10; c++)
+
 //			{
 //				n = a * a * a + b * b * b + c * c * c;
 //				m = a * 100 + b * 10 + c;
@@ -248,3 +256,81 @@
 //	}
 //	return 0;
 //}
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int m = 0;
+//	for (int i = 100; i <= 999; i++)
+//	{
+//		m = (i / 100) * (i / 100) * (i / 100) + ((i % 100) / 10) * ((i % 100) / 10) * ((i % 100) / 10) + ((i % 100) % 10) * ((i % 100) % 10) * ((i % 100) % 10);
+//		if (i == m)
+//		{
+//			printf("%d ", m);
+//		}
+//	}
+//	return 0;
+//}
+
+//学习成绩>=90分用A表示，学习成绩>=60-80分用B表示，学习成绩<60分用C表示
+//#include<stdio.h>
+//int main()
+//{
+//	int n = 0;
+//	printf("请输入学习成绩:>");
+//	scanf("%d", &n);
+//	if (n >= 90 && n <= 100)
+//	{
+//		printf("等级:A");
+//	}
+//	else if (n >= 60 && n < 90)
+//	{
+//		printf("等级:B");
+//	}
+//	else if (n > 0 && n < 60)
+//	{
+//		printf("等级:C");
+//	}
+//	else
+//	{
+//		printf("输入错误，请重新输入！");
+//	}
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a, b, c,max;
+//	scanf_s("%d%d%d", &a, &b, &c);
+//	if (a > b)
+//		max = a;
+//	else
+//		max = b;
+//	if (c>max)
+//		max = c;
+//	printf("max=%d", max);
+//
+//	return 0;
+//}
+
+#include<stdio.h>
+void show()
+{
+	printf("************购物单***********\n");
+	printf("*****************************\n");
+	printf("手机 苹果 香蕉 水杯 耳机 键盘\n");
+	printf("抽纸 沐浴露 java MYSQL python\n");
+	printf("*****************************\n");
+}
+int main()
+{
+	show();
+	//printf("请输入物品：");
+	//int arr[] = {"手机","苹果","香蕉","水杯","耳机","键盘","抽纸","沐浴露","java","MYSQL",""};
+	//int ret = count();
+	return 0;
+}
